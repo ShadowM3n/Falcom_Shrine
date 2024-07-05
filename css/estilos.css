@@ -1,0 +1,69 @@
+.centrar{
+	text-align: center;
+	}
+
+.margen_centro {
+	margin: auto; 
+	width: 66%;
+	}
+
+p {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	}
+
+#soundworks{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 50px;
+}
+
+#main_logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#barra_nav{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 25px;
+}
+
+.fondo{
+	background-color: #d4d1cb;
+}
+
+.gallery{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+
+.leyenda{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 7px;
+}
+
+a:link {
+  color: red;
+}
+
+
+a:visited {
+  color: green;
+}
+
+
+a:hover {
+  color: hotpink;
+}
+
+
+a:active {
+  color: blue;
+}

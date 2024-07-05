@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Feedback</title>
+ <meta charset="utf-8">
+ <meta name="description" content="Este es un documento HTML5">
+ <meta name="keywords" content="HTML, CSS, JavaScript">
+ <link rel="stylesheet" href="css\estilos.css">
+ <link rel="icon" href="pics\icon.png" type="image/png" sizes="16x16">
+</head>
+
+<body class="fondo">
+
+<header>
+<h1>
+<p><img src="pics\falcom-logo-trans.png" id="main_logo"></p>
+<p id="soundworks">Falcom Shrine</p>
+</h1>
+</header>
+
+
+<nav id="barra_nav" class="centrar">
+<h3>
+<a href="main.html"> Main Page </a> | 
+<a href="albums.html">Albums</a> | 
+<a href="sounds.html">Sounds</a> |
+</h3>
+
+<main>
+<form name="formulario" method="get">
+<p><label>Introduce tu Nombre: <input type="text" name="nombre"> </input> </label></p><br>
+
+<p><label>¿Que opinas sobre la pagina?: <p><textarea name="text" cols="50" rows="6" placeholder="Me gustó mucho"></textarea></p></label></p><br>
+
+<p><label for="pregunta">¿Conocias a Falcom Anteriormente?</label></p>
+<p><select name="pregunta" type="radio" id="pregunta"><p>
+<option value="1">Si</option>
+<option value="2">No</option>
+</select>
+<br>
+
+<br><p>¿Cual es tu album favorito(s)?</p>
+<p><input type="checkbox" name="fav_album"></input><label>Falcom Vocal Collection I</label></p>
+<p><input type="checkbox" name="fav_album"></input><label>Falcom Vocal Collection II</label></p>
+<p><input type="checkbox" name="fav_album"></input><label>Falcom Vocal Collection III</label></p>
+<p><input type="checkbox" name="fav_album"></input><label>Falcom Vocal Collection IV</label></p>
+<p><input type="checkbox" name="fav_album"></input><label>J.D.K Band 1</label></p>
+<p><input type="checkbox" name="fav_album"></input><label>J.D.K Band 2</label></p><br>
+
+<p><label>¿En que fecha nos estás contactando?<br><br></label><input type="date" name="fecha" value="1999-01-05"></p><br>
+
+<p><button type="submit"> Enviar Formulario</button></p>
+</form>
+
+</main>
+
+<footer class="centrar">
+<address>Caracas, Venezuela</address>
+ <a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
+<small>&copy; 2024 </small>
+</footer> 
+
+</body>
+
+</html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <title>Feedback</title>
  <meta charset="utf-8">
@@ -8,15 +7,20 @@
  <meta name="keywords" content="HTML, CSS, JavaScript">
  <link rel="stylesheet" href="css\estilos.css">
  <link rel="icon" href="pics\icon.png" type="image/png" sizes="16x16">
+ <script language="JavaScript" type="text/JavaScript" src="java\scripts.js"></script>
 </head>
 
-<body class="fondo">
+<body onload="updateDateTime(); colores('#d4d1cb', 'black'); ultimamod(); printnav();">
 
 <header>
 <h1>
 <p><img src="pics\falcom-logo-trans.png" id="main_logo"></p>
 <p id="soundworks">Falcom Shrine</p>
 </h1>
+<p class="fechas">La fecha de hoy es:<br></p>
+<p class="fechas" id="datetime"></p>
+<p class="fechas">Ultima fecha de modificacion:</p>
+<p class="fechas" id ="printmod"></p>
 </header>
 
 
@@ -24,17 +28,29 @@
 <h3>
 <a href="main.html"> Main Page </a> | 
 <a href="albums.html">Albums</a> | 
-<a href="sounds.html">Sounds</a> |
+<a href="sounds.html">Sounds</a> 
 </h3>
 
 <main>
-<form name="formulario" method="get">
-<p><label>Introduce tu Nombre: <input type="text" name="nombre"> </input> </label></p><br>
+<div class="container">
+	<div class="column">
+	<h4> ¿De donde nos visitas? </h4>
+	<form>
+	<p><input type="text" id="pais" method="get" required onfocus="paisfond('green')" onblur="paisfond('white')" oninput="paisimp()"></input></p>
+	<p><button type="submit" onclick="paisimp();"> Enviar</button></p>
+	<p id="paisprint"></p>
+	</form>
+</div>
 
-<p><label>¿Que opinas sobre la pagina?: <p><textarea name="text" cols="50" rows="6" placeholder="Me gustó mucho"></textarea></p></label></p><br>
+<div class="column">
+<h4 style="text-align: center"> ¿Puedes llenar una breve encuesta? </h4>
+<form name="formulario" method="get">
+<p><label>Introduce tu Nombre: <input type="text" id="nombre" required onfocus="nomfond('purple')" onblur="nomfond('white'); conv_mayus();"></input></label></p><br>
+
+<p><label>¿Que opinas sobre la pagina?<p><textarea cols="50" rows="6" id="opinion" placeholder="Me gustó mucho" required onfocus="opinfond('yellow')" onblur="opinfond('white'); conv_mayus2()"></textarea></p></label></p><br>
 
 <p><label for="pregunta">¿Conocias a Falcom Anteriormente?</label></p>
-<p><select name="pregunta" type="radio" id="pregunta"><p>
+<p><select name="pregunta" type="radio" id="pregunta" required><p>
 <option value="1">Si</option>
 <option value="2">No</option>
 </select>
@@ -48,18 +64,28 @@
 <p><input type="checkbox" name="fav_album"></input><label>J.D.K Band 1</label></p>
 <p><input type="checkbox" name="fav_album"></input><label>J.D.K Band 2</label></p><br>
 
-<p><label>¿En que fecha nos estás contactando?<br><br></label><input type="date" name="fecha" value="1999-01-05"></p><br>
+<p><label>¿En que fecha nos estás contactando?<br><br></label><input type="date" name="fecha" value="1999-01-05" required></p><br>
 
-<p><button type="submit"> Enviar Formulario</button></p>
+<p><button type="submit" onclick="formimp()";> Enviar Formulario</button></p>
 </form>
 
-</main>
-
-<footer class="centrar">
+<br><footer class="footers">
 <address>Caracas, Venezuela</address>
- <a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
-<small>&copy; 2024 </small>
+<a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
+<small>&copy; 2024</small><br>
+<small id="imprnav"></small>
 </footer> 
+</div>
+
+<div class="column">
+	<h4> Falcom Gallery </h4>
+	<p><img src="pics\sorcerian.jpg" style="width:180px;height:180px;" class="gallery, centrar"><br>Sorcerian (1987)</p><br>
+	<p><img src="pics\ysii.png" style="width:180px;height:180px;" class="gallery, centrar"><br>Ys II (1988)</p><br>
+	<p><img src="pics\star_trader.png" style="width:180px;height:180px;" class="gallery, centrar">
+	<p><img src="pics\star_trader2.png" style="width:180px;height:180px;" class="gallery, centrar"><br>Star Trader (1989)</p><br>
+	</div>
+</div>
+</main>
 
 </body>
 

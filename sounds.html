@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <title>Falcom Sounds</title>
  <meta charset="utf-8">
@@ -8,15 +7,19 @@
  <meta name="keywords" content="HTML, CSS, JavaScript">
  <link rel="stylesheet" href="css\estilos.css">
  <link rel="icon" href="pics\icon.png" type="image/png" sizes="16x16">
+ <script language="JavaScript" type="text/JavaScript" src="java\scripts.js"></script>
 </head>
 
-<body class="fondo">
-
+<body onload="updateDateTime(); colores('#d4d1cb', 'black'); ultimamod(); printnav();">
 <header>
 <h1>
 <p><img src="pics\falcom-logo-trans.png" id="main_logo"></p>
 <p id="soundworks">Falcom Shrine</p>
 </h1>
+<p class="fechas">La fecha de hoy es:<br></p>
+<p class="fechas" id="datetime"></p>
+<p class="fechas">Ultima fecha de modificacion:</p>
+<p class="fechas" id ="printmod"></p>
 </header>
 
 <nav id="barra_nav" class="centrar">
@@ -27,16 +30,42 @@
 </h3>
 </nav>
 
-<div>
+<main>
+<div class="container">
+	<div class="column">
+	<h2> ¿De donde nos visitas? </h2>
+	<form>
+	<p><input type="text" id="pais" method="get" required onfocus="paisfond('green')" onblur="paisfond('white')" oninput="paisimp()"></input></p>
+	<p><button type="submit" onclick="paisimp();"> Enviar</button></p>
+	<p id="paisprint"></p>
+	</form>
+</div>
+
+<div class="column">
 <p><audio source src="./sounds/moon-scape.mp3" type="audio/mpeg" controls>Tu navegador no soporta el formato de audio.</audio><br>Moon Scape - J.D.K Band 2 (1991)</p>
+<p class="leyenda"><img src="pics\jdk-2.jpg" class="gallery_center"></p><br>
 <p><audio source src="./sounds/boy.mp3" type="audio/mpeg" controls>Tu navegador no soporta el formato de audio.</audio><br>Boy on the Wing - J.D.K Band 1 (1991)</p>
-</audio>
+<p class="leyenda"><img src="pics\jdk-1.jpg" class="gallery_center"></p><br>
+
+<br><footer class="footers">
+<address>Caracas, Venezuela</address>
+<a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
+<small>&copy; 2024</small><br>
+<small id="imprnav"></small>
+</footer>
+
+</div>
+
+<div class="column">
+	<h2> Falcom Gallery </h2>
+	<p><img src="pics\sorcerian.jpg" style="width:180px;height:180px;" class="gallery, centrar"><br>Sorcerian (1987)</p><br>
+	<p><img src="pics\ysii.png" style="width:180px;height:180px;" class="gallery, centrar"><br>Ys II (1988)</p><br>
+	<p><img src="pics\star_trader.png" style="width:180px;height:180px;" class="gallery, centrar">
+	<p><img src="pics\star_trader2.png" style="width:180px;height:180px;" class="gallery, centrar"><br>Star Trader (1989)</p><br>
+	</div>
 </div>
 
 </body>
 
-<footer class="centrar">
-<address>Caracas, Venezuela</address>
- <a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
-<small>&copy; 2024 </small>
-</footer> 
+
+</body> 

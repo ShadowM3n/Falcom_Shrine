@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
 <title>Falcom Music</title>
  <meta charset="utf-8">
@@ -8,16 +7,22 @@
  <meta name="keywords" content="HTML, CSS, JavaScript">
  <link rel="stylesheet" type="text/css" href="css\estilos.css">
  <link rel="icon" href="pics\icon.png" type="image/png" sizes="16x16">
-</head>
+ <script language="JavaScript" type="text/JavaScript"src="java\scripts.js"></script> 
+</head>  
 
-<body class="fondo">
+<body onload="updateDateTime(); colores('#d4d1cb', 'black'); ultimamod(); printnav();">
 
 <header>
 <h1>
 <p><img src="pics\falcom-logo-trans.png" id="main_logo"></p>
 <p id="soundworks">Falcom Shrine</p>
 </h1>
+<p class="fechas">La fecha de hoy es:<br></p>
+<p class="fechas" id="datetime"></p>
+<p class="fechas">Ultima fecha de modificacion:</p>
+<p class="fechas" id ="printmod"></p>
 </header>
+
 
 <nav id="barra_nav" class="centrar">
 <h3>
@@ -28,35 +33,52 @@
 </nav>
 
 <main>
+<div class="container">
+	<div class="column">
+	<h2> ¿De donde nos visitas? </h2>
+	<form>
+	<p><input type="text" id="pais" method="get" required onfocus="paisfond('green')" onblur="paisfond('white');" oninput="paisimp()"></input></p>
+	<p><button type="submit" onclick="paisimp();"> Enviar</button></p>
+	<p id="paisprint"></p>
+	<br><br><p>Clickea a Mail para cambiar los colores!</p>
+	<p onclick="colores('purple', 'blue')"><img src="pics\mail.gif" style="width:100px;height:100px;" class="gallery, centrar"></p>
+	<br><p>Clickeala de nuevo para volver a la normalidad!</p>
+	<p onclick="colores('#d4d1cb', 'black')"><img src="pics\mail2.gif" style="width:90px;height:90px;" class="gallery, centrar"></p>
+	</form>
+</div>
 
-<aside>
+<div class="column">
+	<h2 style="text-align: center"> ¿Que es Falcom? </h2>
+	<p>
+	Nihon Falcom Corporation (日本ファルコム株式会社 Nihon Farukomu Kabushiki Kaisha) es una empresa japonesa de videojuegos.
+	La empresa fue fundada en marzo de 1981 por Masayuki Kato.<br><br>
+	Falcom ha jugado un papel definitivo en el crecimiento y desarrollo de la industria japonesa de software de computadora personal.<br><br> 
+	La compañía lanzó el primer videojuego de rol para computadora japonesa en 1983 y siguió con acción en tiempo real y juegos de aventura, así como juegos con bandas sonoras completamente desarrolladas. 
+	Sus títulos insignia incluyen los Dragon Slayer, The Legend of Heroes y la serie Ys. <br><br>La mayoría de los juegos de Falcom han sido portadas a diferentes consolas de videojuegos de todas las generaciones.
+	<br><br>Mas allá de los videojuegos, Falcom también es reconocido por el material con que acompañan estos, como OVAs, cinemáticas, pero mas importante aún, los numerosos albumes musicales que han creado durante toda su carrera,<br>
+	algunos de los cuales exploraremos en esta página web.
+	</p>
+	
+	<br><footer class="footers">
+	<address>Caracas, Venezuela</address>
+	<a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
+	<small>&copy; 2024</small><br>
+	<small id="imprnav"></small>
 
-</aside>
+	
+	</footer> 
+</div>
+	   
 
-<div class="margen_centro">
-<h2 class="centrar">
-¿Que es Falcom?
-</h2>
-
-<p>
-Nihon Falcom Corporation (日本ファルコム株式会社 Nihon Farukomu Kabushiki Kaisha) es una empresa japonesa de videojuegos.
-La empresa fue fundada en marzo de 1981 por Masayuki Kato.<br><br>
-Falcom ha jugado un papel definitivo en el crecimiento y desarrollo de la industria japonesa de software de computadora personal.<br><br> 
-La compañía lanzó el primer videojuego de rol para computadora japonesa en 1983 y siguió con acción en tiempo real y juegos de aventura, así como juegos con bandas sonoras completamente desarrolladas. 
-Sus títulos insignia incluyen los Dragon Slayer, The Legend of Heroes y la serie Ys. <br><br>La mayoría de los juegos de Falcom han sido portadas a diferentes consolas de videojuegos de todas las generaciones.
-<br><br>Mas allá de los videojuegos, Falcom también es reconocido por el material con que acompañan estos, como OVAs, cinemáticas, pero mas importante aún, los numerosos albumes musicales que han creado durante toda su carrera,<br>
-algunos de los cuales exploraremos en esta página web.
-</p> 
+<div class="column">
+	<h2> Falcom Gallery </h2>
+	<p><img src="pics\sorcerian.jpg" style="width:180px;height:180px;" class="gallery, centrar"><br>Sorcerian (1987)</p><br>
+	<p><img src="pics\ysii.png" style="width:180px;height:180px;" class="gallery, centrar"><br>Ys II (1988)</p><br>
+	<p><img src="pics\star_trader.png" style="width:180px;height:180px;" class="gallery, centrar">
+	<p><img src="pics\star_trader2.png" style="width:180px;height:180px;" class="gallery, centrar"><br>Star Trader (1989)</p><br>
+	</div>
 </div>
 
 </main>
-
-<footer class="centrar">
-<address>Caracas, Venezuela</address>
- <a href="mailto:ggraterol01@gmail.com">Gregory D'Agosto</a><br>
-<small>&copy; 2024 </small>
-</footer> 
- 
 </body>
-
 </html>
